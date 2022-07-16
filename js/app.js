@@ -23,7 +23,7 @@ function sum(a, b) {
   return [addedNumbers, sentence];
 
 }
-console.log(sum(1,2));
+// console.log(sum(1,2));
 
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
@@ -51,7 +51,7 @@ function multiply(a, b) {
 
 }
 
-console.log(multiply(3,4));
+// console.log(multiply(3,4));
 
 // Here is the test for multiply(); uncomment it to run it
 testMultiply(5,9);
@@ -87,8 +87,8 @@ function sumAndMultiply(a, b, c) {
   return[numSum2[0], numProduct2[0], q3String1, q3String2];
 
 }
-console.log('***********');
-console.log(sumAndMultiply(2, 3, 4));
+// console.log('***********');
+// console.log(sumAndMultiply(2, 3, 4));
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
@@ -106,16 +106,31 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-let testArray = [2, 3, 4]; //eslint-disable-line
+let testArray = [2, 3, 4];
+let potato = [5,6,7];
 
-function sumArray(sumArr) { //eslint-disable-line
+function sumArray(inputArray) {
+
+  let testArraySum = sum(inputArray[0], inputArray[1]);
+  let testArraySum2 = sum(testArraySum[0], inputArray[2]);
+
+  // console.log('++++++++');
+  // console.log(testArraySum);
+  // console.log('_____________________');
+  // console.log(testArraySum2);
+
+  return [testArraySum2[0], `${inputArray[0]},${inputArray[1]},${inputArray[2]} was passed in as an array of numbers, and ${testArraySum2[0]} is their sum.`];
 
 }
 
 // Here is the test for sumArray(); uncomment it to run it
+// console.log('********');
+// console.log(sumArray(testArray));
+// console.log('==========');
+// console.log(potato);
+// console.log(sumArray(potato));
 
-// testSumArray(testArray);
-
+testSumArray(testArray);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
