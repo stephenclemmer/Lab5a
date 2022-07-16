@@ -70,12 +70,28 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
+function sumAndMultiply(a, b, c) {
+
+  let numSum = sum(a, b);
+
+  let numSum2 = sum(numSum[0], c);
+
+  let numProduct = multiply(a, b);
+
+  let numProduct2 = multiply(numProduct[0], c);
+
+  let q3String1 = `${a} and ${b} and ${c} sum to ${numSum2[0]}.`;
+
+  let q3String2 = `The product of ${a} and ${b} and ${c} is ${numProduct2[0]}.`;
+
+  return[numSum2[0], numProduct2[0], q3String1, q3String2];
 
 }
+console.log('***********');
+console.log(sumAndMultiply(2, 3, 4));
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
